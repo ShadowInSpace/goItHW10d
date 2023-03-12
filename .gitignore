@@ -43,3 +43,13 @@ bin/
 /.idea/
 /gradle/
 /src/main/java/org/example/
+.idea/dataSources.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+settings.gradle
