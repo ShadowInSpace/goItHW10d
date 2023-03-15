@@ -1,4 +1,4 @@
-INSERT INTO Client (name) VALUES
+INSERT INTO hw10s.Client (name) VALUES
                               ('John'),
                               ('Mary'),
                               ('Peter'),
@@ -9,13 +9,13 @@ INSERT INTO Client (name) VALUES
                               ('Karen'),
                               ('Michael'),
                               ('Sarah');
-INSERT INTO Planet (ID, name) VALUES
+INSERT INTO hw10s.Planet (ID, name) VALUES
                                   ('EARTH', 'Earth'),
                                   ('MARS', 'Mars'),
                                   ('JUPITER', 'Jupiter'),
                                   ('SATURN', 'Saturn'),
                                   ('NEPTUNE', 'Neptune');
-INSERT INTO Ticket (client_id, from_planet_id, to_planet_id, created_at)
+INSERT INTO hw10s.Ticket (client_id, from_planet_id, to_planet_id, created_at)
 VALUES
     (1, 1, 2, '2022-05-15 13:20:00'),
     (2, 3, 1, '2022-06-01 08:45:00'),
