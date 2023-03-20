@@ -1,0 +1,42 @@
+package HW10.Services;
+
+
+import HW10.Entities.Client;
+import HW10.Utils.HibernateUtil;
+import lombok.Data;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import java.util.NoSuchElementException;
+
+public class ClientCrudService {
+private final SessionFactory sessionFactory;
+    public ClientCrudService() {
+        this.sessionFactory = HibernateUtil.getInstance().getSessionFactory();
+    }
+
+        public void createClient (Client client){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.persist(client);
+        transaction.commit();
+        session.close();
+    }
+    public Client getById(int id){
+        Session session = sessionFactory.openSession();
+        Client client = session.get(Client.class, Integer.toUnsignedLong(id));
+        if(client==null) {
+            throw new NoSuchElementException("Client with id " + id + " not found");
+        } else return client;
+    }
+
+    public void deleteClient(Client client){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.remove(client);
+        transaction.commit();
+        session.close();
+    }
+
+}
