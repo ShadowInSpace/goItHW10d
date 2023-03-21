@@ -3,7 +3,6 @@ package HW10.Services;
 
 import HW10.Entities.Client;
 import HW10.Utils.HibernateUtil;
-import lombok.Data;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -16,7 +15,7 @@ private final SessionFactory sessionFactory;
         this.sessionFactory = HibernateUtil.getInstance().getSessionFactory();
     }
 
-        public void createClient (Client client){
+        public void postClient(Client client){
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.persist(client);
@@ -28,7 +27,9 @@ private final SessionFactory sessionFactory;
         Client client = session.get(Client.class, Integer.toUnsignedLong(id));
         if(client==null) {
             throw new NoSuchElementException("Client with id " + id + " not found");
-        } else return client;
+        }
+        session.close();
+        return client;
     }
 
     public void deleteClient(Client client){
