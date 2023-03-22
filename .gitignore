@@ -56,3 +56,5 @@ settings.gradle
 mydb2.trace.db
 mydb2.trace.db
 mydb3.trace.db
+mydb2.trace.db
+mydb3.trace.db
