@@ -1,7 +1,7 @@
-package HW10.Utils;
+package hw10.utils;
 
-import HW10.Entities.Client;
-import HW10.Entities.Planet;
+import hw10.entities.Client;
+import hw10.entities.Planet;
 import lombok.Getter;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

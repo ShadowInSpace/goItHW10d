@@ -1,9 +1,9 @@
-package HW10;
+package hw10;
 
-import HW10.Entities.Client;
-import HW10.Entities.Planet;
-import HW10.Services.ClientCrudService;
-import HW10.Services.PlanetCrudService;
+import hw10.entities.Client;
+import hw10.entities.Planet;
+import hw10.Services.ClientCrudService;
+import hw10.Services.PlanetCrudService;
 
 public class Main {
     public static void main(String[] args) {
