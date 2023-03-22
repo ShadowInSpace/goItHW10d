@@ -59,5 +59,5 @@ select c1_0.id,c1_0.name from hw10s.Client c1_0 where c1_0.id=? [90079-212]
 	at org.hibernate.loader.access.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:108)
 	at org.hibernate.loader.access.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:161)
 	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1023)
-	at HW10.Services.ClientCrudService.getById(ClientCrudService.java:33)
-	at HW10.Main.main(Main.java:13)
+	at hw10.Services.ClientCrudService.getById(ClientCrudService.java:33)
+	at hw10.Main.main(Main.java:13)
